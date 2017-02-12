@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VMote - Thermostat</title>
+</head>
+
+<body>
+  <a href="menu.html">back to menu</a>
+  <h2>Thermostat Application</h2>
+  <ul id="page0">
+    <li>
+      <a href="#" id="thermostat_on" style="display:block">Turn air on<br><img source="thermometer-2-48.png" alt="thermostat on icon"/></a>
+      <a href="#" id="thermostat_off" style="display:none">Turn air off<br><img source="thermometer-2-48_1.png" alt="thermostat off icon"/></a>
+    </li>
+    <li>
+      <form action="">
+        <label for="min_temp">Min temp:</label>
+        <input id="min_temp" type="text" name="Min temp" value="68"><br>
+        <label for="max_temp">Max temp:</label>
+        <input id="max_temp" type="text" name="Max temp" value="74"><br>
+        <input type="submit" value="Submit">
+      </form>
+    </li>
+  </ul>
+</body>
+<script>
+  document.getElementById("thermostat_on").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("thermostat_on").style.display = "none";
+    document.getElementById("thermostat_off").style.display = "block";
+  });
+  document.getElementById("thermostat_off").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("thermostat_off").style.display = "none";
+    document.getElementById("thermostat_on").style.display = "block";
+  });
+</script>
+</html>

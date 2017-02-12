@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VMote - Music</title>
+</head>
+
+<body>
+  <a href="menu.html">back to menu</a>
+  <h2>Music Application</h2>
+  <ul id="page0">
+    <li>
+      <a href="#" id="music_on" style="display:block">Turn music on<br><img source="volume-up-4-48.png" alt="mute icon"/></a>
+      <a href="#" id="music_off" style="display:none">Turn music off<br><img source="mute-2-48.png" alt="unmute icon"/></a>
+    </li>
+    <li>
+      <a href="#" id="music_up">Volume up<br><img source="audio-add-48.png" alt="volume up icon"/></a>
+      <br>
+      <a href="#" id="music_down">Volume down<br><img source="audio-remove-48.png" alt="volume down icon"/></a>
+    </li>
+    <li>
+      <a href="#" id="music_next">Next song<br><img source="arrow-44-48" alt="skip forward icon"/></a>
+      <br>
+      <a href="#" id="music_previous">Previous song<br><img source="media-skip-backward-48.png" alt="skip backward icon"/></a>
+    </li>
+  </ul>
+</body>
+<script>
+  document.getElementById("music_on").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("music_on").style.display = "none";
+    document.getElementById("music_off").style.display = "block";
+  });
+  document.getElementById("music_off").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("music_off").style.display = "none";
+    document.getElementById("music_on").style.display = "block";
+  });
+</script>
+</html>

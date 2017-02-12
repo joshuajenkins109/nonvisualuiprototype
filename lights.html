@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VMote - Lights</title>
+</head>
+
+<body>
+  <a href="menu.html">back to menu</a>
+  <h2>Lights Application</h2>
+  <ul id="page0">
+    <li>
+      <a href="#" id="lights_on" style="display:block">Turn lights on<br><img source="light-bulb-2-48.png" alt="lights on icon"/></a>
+      <a href="#" id="lights_off" style="display:none">Turn lights off<br><img source="light-bulb-48.png" alt="lights off icon"/></a>
+    </li>
+  </ul>
+</body>
+<script>
+  document.getElementById("lights_on").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("lights_on").style.display = "none";
+    document.getElementById("lights_off").style.display = "block";
+  });
+  document.getElementById("lights_off").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("lights_off").style.display = "none";
+    document.getElementById("lights_on").style.display = "block";
+  });
+</script>
+</html>

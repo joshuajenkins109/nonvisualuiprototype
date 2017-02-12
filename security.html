@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VMote - Security</title>
+</head>
+
+<body>
+  <a href="menu.html">back to menu</a>
+  <h2>Security Application</h2>
+  <ul id="page0">
+    <li>
+      <a href="#" id="locks_on" style="display:block">Lock all doors<br><img source="padlock-3-48.png" alt="lock icon"/></a>
+      <a href="#" id="locks_off" style="display:none">Unlock all doors<br><img source="padlock-4-48.png" alt="unlock icon"/></a>
+    </li>
+  </ul>
+</body>
+<script>
+  document.getElementById("locks_on").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("locks_on").style.display = "none";
+    document.getElementById("locks_off").style.display = "block";
+  });
+  document.getElementById("locks_off").addEventListener("click", function(el){
+    el.preventDefault();
+    document.getElementById("locks_off").style.display = "none";
+    document.getElementById("locks_on").style.display = "block";
+  });
+</script>
+</html>
